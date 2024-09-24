@@ -16,7 +16,8 @@ connectCloudinary();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://spotify-clone-ui-admin.vercel.app/",
+    // origin: "https://spotify-clone-ui-admin.vercel.app/",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST"],
     preflightContinue: false,
     credentials: true,
