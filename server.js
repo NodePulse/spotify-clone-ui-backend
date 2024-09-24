@@ -14,7 +14,13 @@ connectDB();
 connectCloudinary();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://spotify-clone-ui-admin.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST"],
+  })
+);
 
 app.use("/api/song", songRouter);
 app.use("/api/album", albumRouter);
